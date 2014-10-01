@@ -1,5 +1,3 @@
-switch(zalen) {
-    case zaal1:
         var zaal1 = [
                     [0,0,1,1,1,1,1,1,1,1,0,0],
                     [0,1,1,1,1,1,1,1,1,1,1,0],
@@ -16,8 +14,7 @@ switch(zalen) {
                     [0,1,1,1,1,1,1,1,1,1,1,0],
                     [0,0,1,1,1,1,1,1,1,1,0,0]
                     ];
-        break;
-    case zaal2:
+
         var zaal2 = [
                     [0,1,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,1,1,0],
                     [0,1,1,1,1,1,0,2,2,2,2,2,2,0,1,1,1,1,1,0],
@@ -39,8 +36,7 @@ switch(zalen) {
                     [0,0,0,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,0,0],
                     [0,0,0,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,0,0]
                     ];
-        break;
-    case zaal3:
+           
         var zaal3 = [
                     [0,0,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,0,0],
                     [0,0,0,1,1,1,1,1,1,2,2,0,2,2,2,2,2,2,2,2,0,2,2,1,1,1,1,1,1,0,0,0],
@@ -65,4 +61,29 @@ switch(zalen) {
                     [0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0],
                     [0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0]
                     ];
+            var zaal4 = []        
+              
+
+function go(zalen) {
+    document.write("<table border=1>");
+    for(var i = 0; i < zaal1.length; i++) {
+        document.write("<tr>");
+        for(var j = 0; j < zaal1[i].length; j++){
+            if(zaal1[i][j] === 1) {
+            document.write("<td id='rij_"+i+" "+j+"_stoel'>1</td>");
+            }
+            else if(zaal1[i][j] === 2) {
+                document.write("<td>2</td>");
+            }
+            else if(zaal1[i][j] === 3){
+                document.write("<td>3</td>");
+            } else {
+            document.write("<td>"+zaal1[i][j]+"</td>");
+        }
+    }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+    return zalen;
 }
